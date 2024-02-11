@@ -11,8 +11,8 @@ app.use(express.static(path.resolve(__dirname, './public')));
 
 app.use(express.json());
 
-app.get('/timer', authenticateUser, function (request, response) {
-  response.sendFile(path.resolve(__dirname, './public/pages', 'timer.html'));
+app.get('/timer', function (request, response) {
+  response.sendFile(path.resolve(__dirname, './public', 'index.html'));
 });
 
 // Specify the port to listen on
